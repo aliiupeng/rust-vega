@@ -202,8 +202,8 @@ target | std | notes
 [`riscv32imafc-unknown-none-elf`](platform-support/riscv32-unknown-none-elf.md) | * | Bare RISC-V (RV32IMAFC ISA)
 [`riscv32imc-unknown-none-elf`](platform-support/riscv32-unknown-none-elf.md) | * | Bare RISC-V (RV32IMC ISA)
 [`riscv64a23-unknown-linux-gnu`](platform-support/riscv64a23-unknown-linux-gnu.md) | ✓ | RISC-V Linux (kernel 6.8.0+, glibc 2.39)
-`riscv64gc-unknown-none-elf` | * | Bare RISC-V (RV64IMAFDC ISA)
-`riscv64imac-unknown-none-elf` | * | Bare RISC-V (RV64IMAC ISA)
+[`riscv64gc-unknown-none-elf`](platform-support/riscv64-unknown-none-elf.md) | * | Bare RISC-V (RV64IMAFDC ISA)
+[`riscv64imac-unknown-none-elf`](platform-support/riscv64-unknown-none-elf.md) | * | Bare RISC-V (RV64IMAC ISA)
 `sparc64-unknown-linux-gnu` | ✓ | SPARC Linux (kernel 4.4+, glibc 2.23)
 [`s390x-unknown-none-softfloat`](platform-support/s390x-unknown-none-softfloat.md) | * | Bare S390x (softfloat ABI)
 [`thumbv6m-none-eabi`](platform-support/thumbv6m-none-eabi.md) | * | Bare Armv6-M
@@ -291,6 +291,7 @@ target | std | host | notes
 [`aarch64-unknown-qtee`](platform-support/aarch64-unknown-qtee.md) | ? |  | ARM64 QTEE |
 [`aarch64-unknown-trusty`](platform-support/trusty.md) | ✓ |  |
 [`aarch64-uwp-windows-msvc`](platform-support/uwp-windows-msvc.md) | ✓ |  |
+[`aarch64-vega-linux-gnu`](platform-support/vega-linux-gnu.md) | ✓ |  | ARM64 Vega OS (glibc 2.35)
 [`aarch64-wrs-vxworks`](platform-support/vxworks.md) | ✓ |  | ARM64 VxWorks OS
 [`aarch64v8r-unknown-none`](platform-support/aarch64v8r-unknown-none.md) | * | | Bare Armv8-R in AArch64 mode, hardfloat
 [`aarch64v8r-unknown-none-softfloat`](platform-support/aarch64v8r-unknown-none.md) | * | | Bare Armv8-R in AArch64 mode, softfloat
@@ -325,6 +326,7 @@ target | std | host | notes
 [`armv7-unknown-linux-uclibceabihf`](platform-support/armv7-unknown-linux-uclibceabihf.md) | ✓ | ? | Armv7-A Linux with uClibc, hardfloat
 [`armv7-unknown-netbsd-eabihf`](platform-support/netbsd.md) | ✓ | ✓ | Armv7-A NetBSD w/hard-float
 [`armv7-unknown-trusty`](platform-support/trusty.md) | ✓ |  |
+[`armv7-vega-linux-gnueabihf`](platform-support/vega-linux-gnu.md) | ✓ |  | Armv7-A Vega OS, hardfloat, Cortex-A7 with NEON (glibc 2.35)
 [`armv7-wrs-vxworks-eabihf`](platform-support/vxworks.md) | ✓ |  | Armv7-A for VxWorks
 [`armv7a-kmc-solid_asp3-eabi`](platform-support/kmc-solid.md) | ✓ |  | ARM SOLID with TOPPERS/ASP3
 [`armv7a-kmc-solid_asp3-eabihf`](platform-support/kmc-solid.md) | ✓ |  | ARM SOLID with TOPPERS/ASP3, hardfloat
@@ -424,7 +426,7 @@ target | std | host | notes
 [`riscv64gc-unknown-nuttx-elf`](platform-support/nuttx.md) | ✓ |  | RISC-V 64bit with NuttX
 [`riscv64gc-unknown-openbsd`](platform-support/openbsd.md) | ✓ | ✓ | OpenBSD/riscv64
 [`riscv64gc-unknown-redox`](platform-support/redox.md) | ✓ |  | RISC-V 64bit Redox OS
-[`riscv64im-unknown-none-elf`](platform-support/riscv64im-unknown-none-elf.md) | * |  | Bare RISC-V (RV64IM ISA)
+[`riscv64im-unknown-none-elf`](platform-support/riscv64-unknown-none-elf.md) | * |  | Bare RISC-V (RV64IM ISA)
 [`riscv64imac-unknown-nuttx-elf`](platform-support/nuttx.md) | ✓ |  | RISC-V 64bit with NuttX
 [`s390x-unknown-linux-musl`](platform-support/s390x-unknown-linux-musl.md) | ✓ |  | S390x Linux (kernel 3.2, musl 1.2.5)
 `sparc-unknown-linux-gnu` | ✓ |  | 32-bit SPARC Linux
@@ -448,6 +450,7 @@ target | std | host | notes
 [`thumbv8m.base-nuttx-eabi`](platform-support/nuttx.md) | ✓ |  | ARMv8M Baseline with NuttX
 [`thumbv8m.main-nuttx-eabi`](platform-support/nuttx.md) | ✓ |  | ARMv8M Mainline with NuttX
 [`thumbv8m.main-nuttx-eabihf`](platform-support/nuttx.md) | ✓ |  | ARMv8M Mainline with NuttX, hardfloat
+[`wasm32-none-component`](platform-support/wasm32-none-component.md) | * |  | WebAssembly bare components
 [`wasm64-unknown-unknown`](platform-support/wasm64-unknown-unknown.md) | ? |  | WebAssembly
 [`wasm32-wali-linux-musl`](platform-support/wasm32-wali-linux.md) | ? |  | WebAssembly with [WALI](https://github.com/arjunr2/WALI)
 [`x86_64-apple-tvos`](platform-support/apple-tvos.md) | ✓ |  | x86 64-bit tvOS
@@ -473,6 +476,7 @@ target | std | host | notes
 [`x86_64-unknown-trusty`](platform-support/trusty.md) | ✓ |  |
 `x86_64-uwp-windows-gnu` | ✓ |  |
 [`x86_64-uwp-windows-msvc`](platform-support/uwp-windows-msvc.md) | ✓ |  |
+[`x86_64-vega-linux-gnu`](platform-support/vega-linux-gnu.md) | ✓ |  | 64-bit Vega OS (glibc 2.35)
 [`x86_64-win7-windows-gnu`](platform-support/win7-windows-gnu.md) | ✓ |  | 64-bit Windows 7 support
 [`x86_64-win7-windows-msvc`](platform-support/win7-windows-msvc.md) | ✓ | ✓ | 64-bit Windows 7 support
 [`x86_64-wrs-vxworks`](platform-support/vxworks.md) | ✓ |  |
